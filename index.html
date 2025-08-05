@@ -95,7 +95,10 @@
                 </p>
                 
                 <!-- Form Early Access -->
-                <form id="early-access-form" class="mt-10 max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                <form id="early-access-form" 
+                    action="https://formspree.io/f/mvgawanq" 
+                    method="POST"
+                    class="mt-10 max-w-md mx-auto flex flex-col sm:flex-row gap-3">
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" id="email" name="email" required
                            class="w-full px-5 py-3.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
@@ -183,35 +186,6 @@
         
     </div>
 
-    <script>
-        // Gestione del form di early access
-        const form = document.getElementById('early-access-form');
-        const messageDiv = document.getElementById('form-message');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Previene il ricaricamento della pagina
-            
-            // Simula una chiamata API
-            messageDiv.textContent = 'Grazie! Ti abbiamo aggiunto alla lista.';
-            
-            // Disabilita il form dopo l'invio
-            form.querySelector('input').disabled = true;
-            form.querySelector('button').disabled = true;
-            form.querySelector('button').textContent = 'Registrato!';
-            form.querySelector('button').style.opacity = '0.7';
-            form.querySelector('button').style.cursor = 'not-allowed';
-        });
-
-        // Smooth scroll per i link di ancoraggio
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
+    
 </body>
 </html>
