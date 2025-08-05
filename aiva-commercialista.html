@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiva - Il tuo Commercialista AI per Partita IVA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050509;
+            color: #E2E8F0;
+        }
+        /* Effetto glow per l'header */
+        .header-glow::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; /* Posizionato per coprire il bordo */
+            left: 0;
+            right: 0;
+            height: 200px; /* Altezza del gradiente */
+            width: 100%;
+            background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0));
+            pointer-events: none;
+            z-index: 20;
+        }
+        .cta-button {
+            background: linear-gradient(90deg, #4F46E5 0%, #A855F7 100%);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+            transform: translateY(-2px);
+        }
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        /* Animazione per l'entrata degli elementi */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Contenitore principale -->
+    <div class="relative min-h-screen overflow-x-hidden">
+
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-30 bg-opacity-80 backdrop-blur-sm header-glow">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rainbow-icon lucide-rainbow"><path d="M22 17a10 10 0 0 0-20 0"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M10 17a2 2 0 0 1 4 0"/></svg>
+                    <span class="text-2xl font-bold text-white">Aiva</span>
+                </a>
+                <!-- Navigazione -->
+                <nav>
+                    <a href="#early-access-form" class="cta-button text-white font-semibold px-5 py-2.5 rounded-lg text-sm">
+                        Early Access
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="pt-32 pb-20">
+
+            <!-- Hero Section -->
+            <section class="text-center container mx-auto px-6 fade-in">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white leading-tight">
+                    Il tuo commercial<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">IA</span>lista AI
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-400">
+                    Aiva automatizza la tua fiscalità, ti fa risparmiare tempo e ti aiuta a prendere decisioni migliori. Per la tua Partita IVA, senza stress.
+                </p>
+                
+                <!-- Form Early Access -->
+                <form id="early-access-form" class="mt-10 max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-5 py-3.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
+                           placeholder="Inserisci la tua email">
+                    <button type="submit" class="cta-button text-white font-semibold px-6 py-3.5 rounded-lg w-full sm:w-auto flex-shrink-0">
+                        Richiedi l'accesso
+                    </button>
+                </form>
+                <div id="form-message" class="mt-4 text-sm text-green-400 h-5"></div>
+
+            </section>
+
+            <!-- Features Section -->
+            <section class="container mx-auto px-6 mt-24 md:mt-32">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">La gestione fiscale non è mai stata così intelligente</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Tutto ciò di cui hai bisogno per la tua attività, in un unico posto.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.2s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg text-white">Fatturazione Semplificata</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Crea e invia fatture elettroniche conformi in pochi click. Aiva gestisce tutto, dalla creazione all'invio allo SdI.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.4s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg text-white">Previsioni Fiscali</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Niente più sorprese. Tieni sotto controllo le tasse e i contributi da versare con proiezioni in tempo reale.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.6s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg text-white">Scadenze Automatiche</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Aiva ti ricorda ogni scadenza fiscale e amministrativa. Concentrati sul tuo lavoro, al resto pensiamo noi.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.8s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 8V4H8"></path><path d="M20 12v4h-4"></path><path d="M4 12a8 8 0 0 1 8-8h8v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8Z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg text-white">Consulenza AI 24/7</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Hai un dubbio fiscale? Chiedi ad Aiva. Ottieni risposte chiare e immediate basate sulla normativa vigente.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Final CTA Section -->
+            <section class="container mx-auto px-6 mt-24 md:mt-32 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white">Pronto a semplificare la tua fiscalità?</h2>
+                 <p class="mt-4 max-w-xl mx-auto text-gray-400">
+                    Unisciti alla lista d'attesa. Sarai tra i primi a provare Aiva e a ricevere un'offerta speciale al lancio.
+                 </p>
+                 <div class="mt-8 max-w-md mx-auto">
+                     <a href="#early-access-form" class="cta-button w-full text-white font-semibold px-6 py-3.5 rounded-lg inline-block">
+                        Richiedi l'accesso anticipato
+                    </a>
+                 </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="container mx-auto px-6 py-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rainbow-icon lucide-rainbow"><path d="M22 17a10 10 0 0 0-20 0"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M10 17a2 2 0 0 1 4 0"/></svg>
+                    <span class="text-lg font-semibold text-white">Aiva</span>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2024 Aiva. Tutti i diritti riservati.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-sm text-gray-500 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-white transition">Termini di Servizio</a>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script>
+        // Gestione del form di early access
+        const form = document.getElementById('early-access-form');
+        const messageDiv = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Previene il ricaricamento della pagina
+            
+            // Simula una chiamata API
+            messageDiv.textContent = 'Grazie! Ti abbiamo aggiunto alla lista.';
+            
+            // Disabilita il form dopo l'invio
+            form.querySelector('input').disabled = true;
+            form.querySelector('button').disabled = true;
+            form.querySelector('button').textContent = 'Registrato!';
+            form.querySelector('button').style.opacity = '0.7';
+            form.querySelector('button').style.cursor = 'not-allowed';
+        });
+
+        // Smooth scroll per i link di ancoraggio
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
