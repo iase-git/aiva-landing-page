@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiva - Il tuo Commercialista AI per Partita IVA</title>
+    <title>Aiva - Il tuo CommercIAlista per Partita IVA</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Inter & Caveat for signature -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
     <style>
@@ -20,6 +20,11 @@
             background-color: #050509;
             color: #E2E8F0;
             scroll-behavior: smooth;
+        }
+        .signature {
+            font-family: 'Caveat', cursive;
+            font-size: 1.75rem;
+            color: #cbd5e1;
         }
         .header-glow::after {
             content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
@@ -80,10 +85,10 @@
             <!-- Hero Section -->
             <section class="text-center container mx-auto px-6 fade-in">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white leading-tight">
-                    Il tuo commerc<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">IA</span>lista
+                    Il tuo commerc<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">IA</span>lista.
                 </h1>
-                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-400">
-                    Aiva automatizza la tua fiscalità, ti fa risparmiare tempo e ti aiuta a prendere decisioni migliori. Per la tua Partita IVA, senza stress.
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-400">
+                    L'intelligenza artificiale che lavora per la tua libertà. Aiva è il primo commercialista basato su AI che automatizza la burocrazia, anticipa le tue tasse e ti dà la lucidità di un CEO per far crescere la tua attività.
                 </p>
                  <div class="mt-10">
                     <a href="#pricing" class="cta-button text-white font-semibold px-8 py-4 rounded-lg">
@@ -94,31 +99,41 @@
 
             <!-- Features Section -->
             <section class="container mx-auto px-6 mt-24 md:mt-32">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">La gestione fiscale non è mai stata così intelligente</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Tutto ciò di cui hai bisogno per la tua attività, in un unico posto.</p>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Cosa significa avere un'AI Fiscale al tuo fianco.</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Features... -->
-                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.2s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
-                        <h3 class="font-semibold text-lg text-white">Fatturazione Semplificata</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Crea e invia fatture elettroniche conformi in pochi click.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col" style="animation-delay: 0.2s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg text-white">Fatturazione Intelligente</h3>
+                        <p class="text-gray-400 mt-2 text-sm"><b>È domenica sera.</b> Invece di compilare campi infiniti, descrivi ad Aiva cosa ti serve. <b>La nostra AI genera la fattura elettronica per te</b>, completa di tutti i dati corretti. Quello che prima richiedeva un'ora, ora richiede 30 secondi.</p>
                     </div>
-                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.4s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg></div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col" style="animation-delay: 0.4s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+                        </div>
                         <h3 class="font-semibold text-lg text-white">Previsioni Fiscali</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Tieni sotto controllo le tasse e i contributi con proiezioni in tempo reale.</p>
+                        <p class="text-gray-400 mt-2 text-sm"><b>È il 15 del mese.</b> Un cliente ti chiede uno sconto. Invece di rispondere "ci penso", apri Aiva, e <b>la nostra AI ti mostra in tempo reale</b> il tuo utile netto. Prendi una decisione basata <b>sull'analisi predittiva</b>, non su una sensazione.</p>
                     </div>
-                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.6s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col" style="animation-delay: 0.6s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+                        </div>
                         <h3 class="font-semibold text-lg text-white">Scadenze Automatiche</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Aiva ti ricorda ogni scadenza. Concentrati sul tuo lavoro, al resto pensiamo noi.</p>
+                        <p class="text-gray-400 mt-2 text-sm"><b>Sei in vacanza.</b> Un pensiero ti assale: "Avrò pagato l'F24?". Con Aiva, questo pensiero non nasce nemmeno. Sai che <b>l'intelligenza di Aiva monitora il calendario fiscale 24/7 per te</b>. Goditi il panorama.</p>
                     </div>
-                    <div class="feature-card rounded-xl p-6 text-center md:text-left flex flex-col items-center md:items-start fade-in" style="animation-delay: 0.8s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 8V4H8"></path><path d="M20 12v4h-4"></path><path d="M4 12a8 8 0 0 1 8-8h8v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8Z"></path></svg></div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col" style="animation-delay: 0.8s;">
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 8V4H8"></path><path d="M20 12v4h-4"></path><path d="M4 12a8 8 0 0 1 8-8h8v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8Z"></path></svg>
+                        </div>
                         <h3 class="font-semibold text-lg text-white">Consulenza AI 24/7</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Hai un dubbio fiscale? Chiedi ad Aiva. Ottieni risposte chiare e immediate.</p>
+                        <p class="text-gray-400 mt-2 text-sm"><b>Sono le 11 di sera</b> e hai un dubbio. <b>Il nostro modello, addestrato sulla normativa fiscale italiana,</b> ti dà una risposta chiara e immediata, anche a mezzanotte.</p>
                     </div>
                 </div>
             </section>
@@ -126,8 +141,8 @@
             <!-- Pricing Section -->
             <section id="pricing" class="container mx-auto px-6 mt-24 md:mt-32">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Un piano per ogni esigenza</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Scegli il piano più adatto a te. Prova tutto in anteprima con l'early access.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">L'investimento che si ripaga da solo.</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Scegli il partner giusto per la tua crescita. Ogni piano è pensato per farti risparmiare più tempo e denaro di quanto costi.</p>
                 </div>
 
                 <!-- Toggle Switch -->
@@ -154,7 +169,6 @@
                             <p class="text-sm text-gray-500 mt-1 price-desc"></p>
                         </div>
                         <ul class="mt-8 space-y-4 text-gray-300 flex-grow">
-                            <!-- Features... -->
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Fatturazione Elettronica (10/mese)</span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Calcolo Tasse e Contributi</span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Scadenzario Fiscale</span></li>
@@ -173,11 +187,10 @@
                             <p class="text-sm text-gray-500 mt-1 price-desc"></p>
                         </div>
                         <ul class="mt-8 space-y-4 text-gray-300 flex-grow">
-                            <!-- Features... -->
                              <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Tutto di Essenziale, e in più:</span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Fatture Elettroniche <strong>Illimitate</strong></span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Previsioni Fiscali Avanzate</strong> con AI</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Consulenza AI 24/7</span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Previsioni Fiscali Avanzate</strong></span></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Potenziato dalla nostra <strong>Aiva Fiscal AI™</strong></span></li>
                         </ul>
                          <button onclick="selezionaPiano('Pro')" class="mt-8 w-full text-center cta-button text-white font-semibold py-3 rounded-lg">Scegli Pro</button>
                     </div>
@@ -192,7 +205,6 @@
                             <p class="text-sm text-gray-500 mt-1 price-desc"></p>
                         </div>
                         <ul class="mt-8 space-y-4 text-gray-300 flex-grow">
-                            <!-- Features... -->
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Tutto di Pro, e in più:</span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Gestione Multi-utente</span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-indigo-300">Consulenza Strategica Dedicata</strong></span></li>
@@ -203,6 +215,17 @@
                 </div>
             </section>
 
+            <!-- Founder's Promise Section -->
+            <section class="container mx-auto px-6 mt-24 md:mt-32">
+                <div class="max-w-3xl mx-auto bg-gray-900/30 rounded-xl p-8 md:p-12 text-center">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">Creato da un freelance, per i freelance.</h3>
+                    <p class="mt-6 text-gray-400 text-lg leading-relaxed">
+                        "Ho creato Aiva perché ho capito che il futuro della consulenza non era un altro software, ma <b>un'intelligenza artificiale che lavora al fianco del professionista.</b> La mia missione è usare questa tecnologia per restituire a migliaia di freelance italiani la libertà di concentrarsi sul proprio talento, non sulle tasse. Aiva è il partner che avrei sempre voluto avere. Ora può essere il tuo."
+                    </p>
+                    <p class="mt-8 signature">Italo</p>
+                </div>
+            </section>
+
             <!-- Early Access Form Section -->
             <section id="early-access-section" class="container mx-auto px-6 mt-24 md:mt-32">
                 <div class="max-w-2xl mx-auto bg-gray-900/50 rounded-xl p-8 text-center">
@@ -210,7 +233,7 @@
                     <p id="form-confirmation-text" class="mt-2 text-gray-400">Ottima scelta! Stai richiedendo l'accesso per il piano: <strong class="text-indigo-300">Pro (Annuale)</strong></p>
                     
                     <form id="early-access-form" 
-                          action="https://formspree.io/f/mvgqwanq" 
+                          action="https://formspree.io/f/mvgawanq" 
                           method="POST"
                           class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3">
                         
@@ -225,11 +248,6 @@
                     </form>
                      <div id="form-message" class="mt-4 text-sm text-green-400 h-5"></div>
                 </div>
-            </section>
-            
-            <!-- FAQ Section -->
-            <section class="container mx-auto px-6 mt-24 md:mt-32">
-                <!-- FAQ Content... -->
             </section>
         </main>
         
@@ -249,7 +267,7 @@
         </footer>
     </div>
 
-    <!-- SCRIPT JAVASCRIPT AGGIORNATO -->
+    <!-- SCRIPT JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const toggle = document.getElementById('pricing-toggle');
@@ -302,7 +320,20 @@
                 document.getElementById('email').focus({ preventScroll: true });
             }
 
-            toggle.addEventListener('change', updatePrices);
+            // Smooth scroll for other anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                if (!anchor.closest('.plan-card')) { // Exclude pricing buttons handled by selezionaPiano
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(this.getAttribute('href'));
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                }
+            });
             
             // Init
             updatePrices();
