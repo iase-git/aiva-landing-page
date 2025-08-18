@@ -45,11 +45,6 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-        .plan-card.selected {
-            border-color: #4F46E5;
-            box-shadow: 0 0 30px rgba(79, 70, 229, 0.4);
-            transform: scale(1.02);
-        }
         .pricing-toggle-bg { background-color: rgba(255, 255, 255, 0.05); }
         .pricing-toggle-handle { background-color: #4F46E5; transition: transform 0.3s ease; }
         input:checked + .pricing-toggle-bg .pricing-toggle-handle { transform: translateX(100%); }
@@ -59,25 +54,6 @@
         }
         .fade-in { animation: fadeIn 0.8s ease-out forwards; }
     </style>
-
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1093268582368363');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
- 
 </head>
 <body class="antialiased">
 
@@ -91,8 +67,8 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                     <span class="text-2xl font-bold text-white">Aiva</span>
                 </a>
                 <nav>
-                    <a href="#early-access-section" class="cta-button text-white font-semibold px-5 py-2.5 rounded-lg text-sm">
-                        Early Access
+                    <a href="#pricing" class="cta-button text-white font-semibold px-5 py-2.5 rounded-lg text-sm">
+                        Inizia Ora
                     </a>
                 </nav>
             </div>
@@ -122,38 +98,26 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Cosa significa avere un'AI Fiscale al tuo fianco.</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Feature 1 -->
+                    <!-- Feature Cards -->
                     <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.2s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                        </div>
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
                         <h3 class="font-semibold text-lg text-white">Fatturazione Intelligente</h3>
-                        <p class="text-gray-400 mt-2 text-sm"><b>È domenica sera.</b> Invece di compilare campi infiniti, descrivi ad Aiva cosa ti serve. <b>La nostra AI genera la fattura elettronica per te</b>, completa di tutti i dati corretti. Quello che prima richiedeva un'ora, ora richiede 30 secondi.</p>
+                        <p class="text-gray-400 mt-2 text-sm"><b>È domenica sera.</b> Invece di compilare campi infiniti, descrivi ad Aiva cosa ti serve. <b>La nostra AI genera la fattura elettronica per te</b>, completa di tutti i dati corretti.</p>
                     </div>
-                    <!-- Feature 2 -->
                     <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.4s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
-                        </div>
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg></div>
                         <h3 class="font-semibold text-lg text-white">Previsioni Fiscali</h3>
-                        <p class="text-gray-400 mt-2 text-sm"><b>È il 15 del mese.</b> Un cliente ti chiede uno sconto. Invece di rispondere "ci penso", apri Aiva, e <b>la nostra AI ti mostra in tempo reale</b> il tuo utile netto. Prendi una decisione basata <b>sull'analisi predittiva</b>, non su una sensazione.</p>
+                        <p class="text-gray-400 mt-2 text-sm"><b>È il 15 del mese.</b> Un cliente ti chiede uno sconto. Invece di rispondere "ci penso", apri Aiva, e <b>la nostra AI ti mostra in tempo reale</b> il tuo utile netto.</p>
                     </div>
-                    <!-- Feature 3 -->
                     <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.6s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
-                        </div>
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></div>
                         <h3 class="font-semibold text-lg text-white">Scadenze Automatiche</h3>
-                        <p class="text-gray-400 mt-2 text-sm"><b>Sei in vacanza.</b> Un pensiero ti assale: "Avrò pagato l'F24?". Con Aiva, questo pensiero non nasce nemmeno. Sai che <b>l'intelligenza di Aiva monitora il calendario fiscale 24/7 per te</b>. Goditi il panorama.</p>
+                        <p class="text-gray-400 mt-2 text-sm"><b>Sei in vacanza.</b> Un pensiero ti assale: "Avrò pagato l'F24?". Con Aiva, questo pensiero non nasce nemmeno. Sai che <b>l'AI monitora il calendario fiscale 24/7 per te</b>.</p>
                     </div>
-                    <!-- Feature 4 -->
                     <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.8s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5">
-                            <!-- NUOVA ICONA INSERITA QUI -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"/><path d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 13 6 6"/></svg>
-                        </div>
+                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"/><path d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 13 6 6"/></svg></div>
                         <h3 class="font-semibold text-lg text-white">Consulenza AI 24/7</h3>
-                        <p class="text-gray-400 mt-2 text-sm"><b>Sono le 11 di sera</b> e hai un dubbio. <b>Il nostro modello, addestrato sulla normativa fiscale italiana,</b> ti dà una risposta chiara e immediata, anche a mezzanotte.</p>
+                        <p class="text-gray-400 mt-2 text-sm"><b>Sono le 11 di sera</b> e hai un dubbio. <b>Il nostro modello, addestrato sulla normativa fiscale italiana,</b> ti dà una risposta chiara e immediata.</p>
                     </div>
                 </div>
             </section>
@@ -180,7 +144,7 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     
                     <!-- Piano 1: Essenziale -->
-                    <div id="plan-essenziale" class="plan-card feature-card rounded-xl p-8 flex flex-col">
+                    <div class="feature-card rounded-xl p-8 flex flex-col">
                         <h3 class="text-xl font-bold text-white">Essenziale</h3>
                         <p class="text-gray-400 mt-2">Per chi è all'inizio e vuole solo essere in regola.</p>
                         <div class="mt-6 price-container" data-price-annuale="€16.58" data-price-mensile="€19" data-desc-annuale="Fatturato annualmente a €199" data-desc-mensile="Fatturato mensilmente">
@@ -193,11 +157,12 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Calcolo Tasse e Contributi</span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Scadenzario Fiscale</span></li>
                         </ul>
-                        <button onclick="selezionaPiano('Essenziale')" class="mt-8 w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all">Scegli Essenziale</button>
+                        <a href="https://buy.stripe.com/8x2eVe7Y85ep3VC8Umawo01" class="payment-button button-annual mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all">Scegli Essenziale</a>
+                        <a href="https://buy.stripe.com/eVq28sa6g8qBcs85Iaawo00" class="payment-button button-monthly mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all" style="display: none;">Scegli Essenziale</a>
                     </div>
 
                     <!-- Piano 2: Pro -->
-                    <div id="plan-pro" class="plan-card feature-card rounded-xl p-8 flex flex-col relative">
+                    <div class="feature-card rounded-xl p-8 flex flex-col relative">
                         <span class="absolute top-0 -translate-y-1/2 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">IL PIÙ SCELTO</span>
                         <h3 class="text-xl font-bold text-white">Pro</h3>
                         <p class="text-gray-400 mt-2">Per professionisti che vogliono ottimizzare e crescere.</p>
@@ -212,11 +177,12 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Previsioni Fiscali Avanzate</strong></span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Potenziato dalla nostra <strong>Aiva Fiscal AI™</strong></span></li>
                         </ul>
-                         <button onclick="selezionaPiano('Pro')" class="mt-8 w-full text-center cta-button text-white font-semibold py-3 rounded-lg">Scegli Pro</button>
+                         <a href="https://buy.stripe.com/8x29AUfqAcGRgIogmOawo03" class="payment-button button-annual mt-8 block w-full text-center cta-button text-white font-semibold py-3 rounded-lg">Scegli Pro</a>
+                         <a href="https://buy.stripe.com/fZueVe6U4cGReAg3A2awo02" class="payment-button button-monthly mt-8 block w-full text-center cta-button text-white font-semibold py-3 rounded-lg" style="display: none;">Scegli Pro</a>
                     </div>
 
                     <!-- Piano 3: Studio -->
-                    <div id="plan-studio" class="plan-card feature-card rounded-xl p-8 flex flex-col">
+                    <div class="feature-card rounded-xl p-8 flex flex-col">
                         <h3 class="text-xl font-bold text-white">Studio</h3>
                         <p class="text-gray-400 mt-2">Per team, agenzie e commercialisti.</p>
                         <div class="mt-6 price-container" data-price-annuale="€66.58" data-price-mensile="€79" data-desc-annuale="Fatturato annualmente a €799" data-desc-mensile="Fatturato mensilmente">
@@ -230,7 +196,8 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-indigo-300">Consulenza Strategica Dedicata</strong></span></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Accesso API e Integrazioni</span></li>
                         </ul>
-                        <button onclick="selezionaPiano('Studio')" class="mt-8 w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all">Scegli Studio</button>
+                        <a href="https://buy.stripe.com/00wbJ2fqA6it63Kc6yawo05" class="payment-button button-annual mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all">Scegli Studio</a>
+                        <a href="https://buy.stripe.com/cNi4gA6U45ep9fWfiKawo04" class="payment-button button-monthly mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all" style="display: none;">Scegli Studio</a>
                     </div>
                 </div>
             </section>
@@ -243,30 +210,6 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                         "Ho creato Aiva perché ho capito che il futuro della consulenza non era un altro software, ma <b>un'intelligenza artificiale che lavora al fianco del professionista.</b> La mia missione è usare questa tecnologia per restituire a migliaia di freelance italiani la libertà di concentrarsi sul proprio talento, non sulle tasse. Aiva è il partner che avrei sempre voluto avere. Ora può essere il tuo."
                     </p>
                     <p class="mt-8 signature">Italo</p>
-                </div>
-            </section>
-
-            <!-- Early Access Form Section -->
-            <section id="early-access-section" class="container mx-auto px-6 mt-24 md:mt-32">
-                <div class="max-w-2xl mx-auto bg-gray-900/50 rounded-xl p-8 text-center">
-                    <h3 class="text-2xl font-bold text-white">Richiedi il tuo accesso anticipato</h3>
-                    <p id="form-confirmation-text" class="mt-2 text-gray-400">Ottima scelta! Stai richiedendo l'accesso per il piano: <strong class="text-indigo-300">Pro (Annuale)</strong></p>
-                    
-                    <form id="early-access-form" 
-                          action="https://formspree.io/f/mvgqwanq" 
-                          method="POST"
-                          class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-                        
-                        <input type="hidden" id="piano_scelto" name="piano_scelto" value="Pro (Annuale)">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="email" id="email" name="email" required
-                               class="w-full px-5 py-3.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
-                               placeholder="Inserisci la tua email">
-                        <button type="submit" class="cta-button text-white font-semibold px-6 py-3.5 rounded-lg w-full sm:w-auto flex-shrink-0">
-                            Richiedi l'accesso
-                        </button>
-                    </form>
-                     <div id="form-message" class="mt-4 text-sm text-green-400 h-5"></div>
                 </div>
             </section>
         </main>
@@ -295,9 +238,10 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
             const toggleLabelAnnuale = document.getElementById('toggle-label-annuale');
             const toggleLabelMensile = document.getElementById('toggle-label-mensile');
 
-            function updatePrices() {
+            function updatePricesAndButtons() {
                 const isMonthly = toggle.checked;
 
+                // Update label colors
                 if (toggleLabelAnnuale && toggleLabelMensile) {
                     toggleLabelAnnuale.classList.toggle('text-white', !isMonthly);
                     toggleLabelAnnuale.classList.toggle('text-gray-500', isMonthly);
@@ -305,6 +249,7 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                     toggleLabelMensile.classList.toggle('text-gray-500', !isMonthly);
                 }
 
+                // Update prices
                 priceContainers.forEach(container => {
                     const priceValueEl = container.querySelector('.price-value');
                     const priceDescEl = container.querySelector('.price-desc');
@@ -326,46 +271,31 @@ src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
                         priceDescEl.textContent = desc;
                     }
                 });
+
+                // Update button visibility
+                document.querySelectorAll('.button-annual').forEach(btn => btn.style.display = isMonthly ? 'none' : 'block');
+                document.querySelectorAll('.button-monthly').forEach(btn => btn.style.display = isMonthly ? 'block' : 'none');
             }
 
-            window.selezionaPiano = function(nomePiano) {
-                const isMonthly = toggle.checked;
-                const tipoPagamento = isMonthly ? 'Mensile' : 'Annuale';
-                const pianoCompleto = `${nomePiano} (${tipoPagamento})`;
-
-                document.getElementById('piano_scelto').value = pianoCompleto;
-                document.getElementById('form-confirmation-text').innerHTML = `Ottima scelta! Stai richiedendo l'accesso per il piano: <strong class="text-indigo-300">${pianoCompleto}</strong>`;
-
-                document.querySelectorAll('.plan-card').forEach(card => card.classList.remove('selected'));
-                document.getElementById(`plan-${nomePiano.toLowerCase()}`).classList.add('selected');
-
-                const formSection = document.getElementById('early-access-section');
-                formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                document.getElementById('email').focus({ preventScroll: true });
-            }
-
-            // Smooth scroll for other anchor links
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                if (!anchor.closest('.plan-card')) {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const targetElement = document.querySelector(this.getAttribute('href'));
-                        if (targetElement) {
-                            targetElement.scrollIntoView({
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                }
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
             });
             
             if (toggle) {
-                toggle.addEventListener('change', updatePrices);
+                toggle.addEventListener('change', updatePricesAndButtons);
             }
             
-            // Init
-            updatePrices();
-            selezionaPiano('Pro');
+            // Initial call to set the correct prices and buttons on page load
+            updatePricesAndButtons();
         });
     </script>
 </body>
