@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grazie – Aiva Commercialista</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Stili come l'index -->
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #050509; color: #E2E8F0; scroll-behavior: smooth; }
+    .signature { font-family: 'Caveat', cursive; font-size: 1.75rem; color: #cbd5e1; }
+    .header-glow::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 200px; width: 100%;
+      background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(99,102,241,.15), rgba(99,102,241,0)); pointer-events: none; z-index: 20; }
+    .feature-card { background-color: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1); transition: all .3s ease; }
+    @keyframes fadeIn { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+    .fade-in { animation: fadeIn .8s ease-out forwards; }
+  </style>
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1093268582368363'); /* <-- tuo Pixel ID */
+  fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"/></noscript>
+</head>
+
+<body class="antialiased">
+  <div class="relative min-h-screen overflow-x-hidden">
+
+    <!-- Header (solo logo) -->
+    <header class="fixed top-0 left-0 right-0 z-30 bg-opacity-80 backdrop-blur-sm header-glow">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 17a10 10 0 0 0-20 0"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M10 17a2 2 0 0 1 4 0"/></svg>
+          <span class="text-2xl font-bold text-white">Aiva</span>
+        </a>
+        <!-- nessun bottone -->
+        <nav></nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="pt-32 pb-20">
+      <section class="text-center container mx-auto px-6 fade-in">
+        <div class="mx-auto max-w-3xl">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 border border-green-400/30 mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white leading-tight">
+            Grazie! Pagamento completato
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-gray-400">
+            Il tuo piano è stato attivato correttamente. Stiamo ultimando la configurazione dell’account.
+          </p>
+        </div>
+
+        <!-- Riepilogo acquisto -->
+        <div id="summary" class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="feature-card rounded-xl p-6 text-left">
+            <div class="text-sm text-gray-400">Piano</div>
+            <div id="sum-plan" class="text-xl font-semibold text-white mt-1">—</div>
+          </div>
+          <div class="feature-card rounded-xl p-6 text-left">
+            <div class="text-sm text-gray-400">Cadenza</div>
+            <div id="sum-billing" class="text-xl font-semibold text-white mt-1">—</div>
+          </div>
+          <div class="feature-card rounded-xl p-6 text-left">
+            <div class="text-sm text-gray-400">Importo</div>
+            <div id="sum-value" class="text-xl font-semibold text-white mt-1">—</div>
+          </div>
+        </div>
+
+        <!-- Messaggi -->
+        <div class="max-w-4xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="feature-card rounded-xl p-8 text-left">
+            <h3 class="text-xl font-bold text-white mb-2">Controlla la tua email</h3>
+            <p class="text-gray-300">Ti abbiamo inviato il <strong>modulo di onboarding</strong>. Se non lo vedi, controlla anche <em>Spam/Promozioni</em>.</p>
+          </div>
+          <div class="feature-card rounded-xl p-8 text-left">
+            <h3 class="text-xl font-bold text-white mb-2">Serve assistenza immediata?</h3>
+            <p class="text-gray-300">
+              Scrivici a <a href="mailto:info@aiva-commercialista.it" class="text-indigo-300 underline">info@aiva-commercialista.it</a>.
+              <strong>Tempo medio di risposta: &lt; 5 minuti</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-8 border-t border-gray-800">
+      <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 17a10 10 0 0 0-20 0"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M10 17a2 2 0 0 1 4 0"/></svg>
+          <span class="text-lg font-semibold text-white">Aiva</span>
+        </div>
+        <p class="text-sm text-gray-500">&copy; 2025 Aiva. Tutti i diritti riservati.</p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="/" class="text-sm text-gray-500 hover:text-white transition">Home</a>
+          <a href="/#pricing" class="text-sm text-gray-500 hover:text-white transition">Piani</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- (facoltativo) Floating WhatsApp -->
+  <a href="https://wa.me/393279799076?text=Ciao%20Italo%2C%20ho%20una%20domanda%20su%20Aiva..." target="_blank"
+     class="fixed bottom-5 right-5 z-40 p-3 bg-green-500 rounded-full shadow-lg hover:scale-110 transition-transform">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M.057 24l1.687-6.163c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- Compila riepilogo + traccia Purchase -->
+  <script>
+    (function(){
+      const p = new URLSearchParams(location.search);
+      const valRaw = (p.get('value') || '').replace(',', '.');
+      const value  = isNaN(parseFloat(valRaw)) ? null : parseFloat(valRaw);
+      const plan   = p.get('plan') || '';
+      const billing= p.get('billing') || '';
+      const coupon = p.get('coupon') || '';
+
+      // Riepilogo UI
+      const fmt = (n) => (typeof n === 'number' ? new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR'}).format(n) : '—');
+      document.getElementById('sum-plan').textContent = plan ? plan.replace('-', ' ') : '—';
+      document.getElementById('sum-billing').textContent = billing || '—';
+      document.getElementById('sum-value').textContent = value !== null ? fmt(value) : '—';
+
+      // EventID (random) per futura dedup con CAPI
+      const eventId = 'purchase-' + Math.random().toString(36).slice(2);
+
+      fbq('track','Purchase', {
+        value: value || 0,
+        currency: 'EUR',
+        content_category: 'plan',
+        content_name: plan || 'unknown',
+        billing_cycle: billing || '',
+        coupon: coupon || ''
+      }, {eventID: eventId});
+    })();
+  </script>
+</body>
+</html>
