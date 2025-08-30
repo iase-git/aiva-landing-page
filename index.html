@@ -3,97 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiva - Il tuo CommercIAlista per Regime Forfettario</title>
+    <title>AIVA | Libera il tuo talento dalla burocrazia</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter & Caveat for signature -->
+    <!-- Google Fonts: Lora (Serif) & Inter (Sans-serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
     
-    <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050509;
-            color: #E2E8F0;
-            scroll-behavior: smooth;
-        }
-        .signature {
-            font-family: 'Caveat', cursive;
-            font-size: 1.75rem;
-            color: #cbd5e1;
-        }
-        .header-glow::after {
-            content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
-            height: 200px; width: 100%;
-            background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0));
-            pointer-events: none; z-index: 20;
-        }
-        .cta-button {
-            background: linear-gradient(90deg, #4F46E5 0%, #A855F7 100%);
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-            transform: translateY(-2px);
-        }
-        .feature-card, .testimonial-card, .faq-item {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        .pricing-toggle-bg { background-color: rgba(255, 255, 255, 0.05); }
-        .pricing-toggle-handle { background-color: #4F46E5; transition: transform 0.3s ease; }
-        input:checked + .pricing-toggle-bg .pricing-toggle-handle { transform: translateX(100%); }
-        
-        /* Stili per FAQ Accordion */
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
-
-        /* Stili per WhatsApp Bubble */
-        .whatsapp-bubble {
-            position: fixed;
-            bottom: 80px; /* Posizionato sopra l'icona di WhatsApp */
-            right: 20px;
-            background-color: #fff;
-            color: #1f2937;
-            padding: 10px 15px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            opacity: 0;
-            transform: translateY(10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            pointer-events: none; /* Non intercettare i click */
-            z-index: 39;
-        }
-        .whatsapp-bubble.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .whatsapp-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            right: 20px;
-            width: 0; 
-            height: 0; 
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 8px solid #fff;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
-    </style>
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -111,406 +30,523 @@
     src="https://www.facebook.com/tr?id=1093268582368363&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #111827;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .font-serif { 
+            font-family: 'Lora', serif; 
+        }
+        .signature {
+            font-family: 'Caveat', cursive;
+            font-size: 1.85rem;
+            color: #1F2937;
+        }
+        .card { 
+            background:#fff; 
+            border:1px solid #e5e7eb; 
+            border-radius:16px; 
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .tile { 
+            width:42px; height:42px; 
+            border:1px solid #e5e7eb; 
+            border-radius:12px; 
+            display:flex; align-items:center; justify-content:center; 
+            background:#fff; 
+            box-shadow:0 4px 15px rgba(17,24,39,.06); 
+        }
+        .kbd { 
+            font-size:12px; 
+            font-family: monospace;
+            border:1px solid #e5e7eb; border-bottom-width:2px; 
+            padding:.15rem .4rem; border-radius:6px; 
+            background:#fafafa;
+            color: #4b5563;
+        }
+        .cta-button {
+            background-color: #111827;
+            color: #FFFFFF;
+            transition: all 0.2s ease;
+            border-radius: 9999px;
+        }
+        .cta-button:hover {
+            background-color: #374151;
+            transform: translateY(-1px);
+        }
+        .secondary-button {
+            border: 1px solid #d1d5db;
+            background-color: #FFFFFF;
+            color: #111827;
+            transition: all 0.2s ease;
+            border-radius: 9999px;
+        }
+        .secondary-button:hover {
+            border-color: #111827;
+            background-color: #f9fafb;
+        }
+        .pricing-toggle-bg { background-color: #E5E7EB; }
+        .pricing-toggle-handle { background-color: #111827; transition: transform 0.3s ease; }
+        input:checked + .pricing-toggle-bg .pricing-toggle-handle { transform: translateX(100%); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        /* Stili per WhatsApp Bubble */
+        .whatsapp-bubble {
+            position: fixed;
+            bottom: 90px; /* Posizionato sopra l'icona di WhatsApp */
+            right: 20px;
+            background-color: #111827; /* Nero, come i CTA */
+            color: #FFFFFF;
+            padding: 12px 16px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(10px) scale(0.95);
+            transition: all 0.3s ease-out;
+            pointer-events: none; /* Non intercettare i click */
+            z-index: 39;
+        }
+        .whatsapp-bubble.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        .whatsapp-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 22px;
+            width: 0; 
+            height: 0; 
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid #111827;
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="bg-white">
 
-    <div class="relative min-h-screen overflow-x-hidden">
-
-        <!-- Header -->
-        <header class="fixed top-0 left-0 right-0 z-30 bg-opacity-80 backdrop-blur-sm header-glow">
-            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#" class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 17a10 10 0 0 0-20 0"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M10 17a2 2 0 0 1 4 0"/></svg>
-                    <span class="text-2xl font-bold text-white">Aiva</span>
-                </a>
-                <nav>
-                    <a href="#pricing" class="cta-button text-white font-semibold px-5 py-2.5 rounded-lg text-sm">
-                        Scegli il Piano
-                    </a>
-                </nav>
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-gray-200">
+        <div class="container max-w-6xl mx-auto h-16 flex items-center justify-between px-6">
+            <a href="#" class="text-xl font-bold text-gray-900" aria-label="Aiva Homepage">
+                Aiva
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm text-gray-600">
+                <a class="hover:text-gray-900" href="#features">Benefici</a>
+                <a class="hover:text-gray-900" href="#testimonials">Testimonianze</a>
+                <a class="hover:text-gray-900" href="#pricing">Piani</a>
+                <a class="hover:text-gray-900" href="#faq">FAQ</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="#pricing" class="cta-button inline-flex items-center h-10 px-5 text-sm font-medium">Inizia Ora</a>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Main Content -->
-        <main class="pt-32 pb-20">
-
-            <!-- Hero Section -->
-            <section class="text-center container mx-auto px-6 fade-in">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white leading-tight">
-                    Il tuo commerc<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">IA</span>lista.
-                </h1>
-                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-400">
-                    La gestione semplice e intelligente per il tuo <strong>Regime Forfettario</strong>. Aiva automatizza la burocrazia e ti libera dal peso delle tasse, così puoi dedicarti a far crescere il tuo business.
-                </p>
-                 <div class="mt-10">
-                    <a href="#pricing" class="cta-button text-white font-bold px-8 py-4 rounded-lg text-lg">
-                        Scopri i Piani
-                    </a>
-                </div>
-            </section>
-
-            <!-- Features Section -->
-            <section class="container mx-auto px-6 mt-24 md:mt-32">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Progettato per le sfide del Regime Forfettario.</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Feature Cards -->
-                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.2s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
-                        <h3 class="font-semibold text-lg text-white">Fatturazione Elettronica</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Crea e invia fatture conformi per il forfettario in pochi secondi. Senza pensare a bolli o diciture.</p>
-                    </div>
-                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.4s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg></div>
-                        <h3 class="font-semibold text-lg text-white">Previsione Tasse in tempo reale</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Basta sorprese a fine anno. Sai sempre quanto devi accantonare per tasse e contributi INPS.</p>
-                    </div>
-                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.6s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></div>
-                        <h3 class="font-semibold text-lg text-white">Scadenze sotto controllo</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Aiva monitora il calendario fiscale per te e ti avvisa per tempo, così non manchi mai un pagamento F24.</p>
-                    </div>
-                    <div class="feature-card rounded-xl p-8 fade-in h-full flex flex-col items-center text-center" style="animation-delay: 0.8s;">
-                        <div class="bg-gray-800 p-3 rounded-lg inline-block mb-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"/><path d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 13 6 6"/></svg></div>
-                        <h3 class="font-semibold text-lg text-white">Consulenza Umana + AI</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Hai un dubbio specifico? Chiedi alla nostra AI fiscale, addestrata sul forfettario, o parla con un nostro commercialista partner.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Social Proof & Testimonials Section -->
-            <section class="container mx-auto px-6 mt-24 md:mt-32">
-                <!-- Social Proof Bar -->
-                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-center mb-16">
-                    <div><span class="font-bold text-indigo-400 text-2xl">50+</span><br><span class="text-sm text-gray-400">Professionisti a bordo</span></div>
-                    <div><span class="font-bold text-indigo-400 text-2xl">1.200+</span><br><span class="text-sm text-gray-400">Fatture già inviate</span></div>
-                    <div><span class="font-bold text-indigo-400 text-2xl">€250k+</span><br><span class="text-sm text-gray-400">Fatturato gestito</span></div>
-                </div>
-
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Non credere a noi, credi a loro.</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Ecco cosa dicono i freelance e i professionisti che hanno già scelto Aiva per la loro Partita IVA.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-card rounded-xl p-8 flex flex-col justify-between">
-                        <div>
-                            <p class="text-gray-300">"Con Aiva ho smesso di passare le domeniche a fare i conti. La previsione delle tasse in tempo reale mi ha salvato da brutte sorprese e mi fa dormire sonni tranquilli. Ho risparmiato almeno 5 ore al mese."</p>
-                        </div>
-                        <div class="flex items-center mt-6">
-                            <img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/312e81/e0e7ff?text=M" alt="Foto di Marco C.">
-                            <div class="ml-4">
-                                <p class="font-semibold text-white">Marco C.</p>
-                                <p class="text-sm text-gray-400">Sviluppatore Freelance</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-card rounded-xl p-8 flex flex-col justify-between">
-                        <div>
-                            <p class="text-gray-300">"Da social media manager, il mio forte sono i contenuti, non i numeri. Aiva ha reso la fatturazione un processo di due minuti, non più un incubo. Finalmente un servizio che capisce le nostre esigenze."</p>
-                        </div>
-                        <div class="flex items-center mt-6">
-                            <img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/312e81/e0e7ff?text=G" alt="Foto di Giulia C.">
-                            <div class="ml-4">
-                                <p class="font-semibold text-white">Giulia C.</p>
-                                <p class="text-sm text-gray-400">Social Media Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-card rounded-xl p-8 flex flex-col justify-between">
-                        <div>
-                            <p class="text-gray-300">"Ero scettico all'inizio, ma mi sono dovuto ricredere. L'assistente AI è sorprendentemente accurato per le domande veloci e avere la conferma di un commercialista per le questioni complesse è la combinazione perfetta."</p>
-                        </div>
-                        <div class="flex items-center mt-6">
-                            <img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/312e81/e0e7ff?text=A" alt="Foto di Alessandro C.">
-                            <div class="ml-4">
-                                <p class="font-semibold text-white">Alessandro C.</p>
-                                <p class="text-sm text-gray-400">Consulente Marketing</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Pricing Section -->
-            <section id="pricing" class="container mx-auto px-6 mt-24 md:mt-32">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">L'investimento che si ripaga da solo.</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Scegli il partner giusto per la tua crescita. Ogni piano è pensato per farti risparmiare più tempo e denaro di quanto costi.</p>
-                </div>
-
-                <!-- Toggle Switch -->
-                <div class="flex items-center justify-center space-x-4 mb-12">
-                    <span id="toggle-label-annuale" class="font-medium text-white transition-colors duration-300">Annuale (Risparmi 2 mesi)</span>
-                    <label for="pricing-toggle" class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" id="pricing-toggle" class="sr-only peer">
-                        <div class="w-14 h-8 pricing-toggle-bg rounded-full flex items-center p-1 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-indigo-500/50">
-                            <div class="w-6 h-6 rounded-full pricing-toggle-handle"></div>
-                        </div>
-                    </label>
-                    <span id="toggle-label-mensile" class="font-medium text-gray-500 transition-colors duration-300">Mensile</span>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    
-                    <!-- Piano 1: Essenziale -->
-                    <div class="feature-card rounded-xl p-8 flex flex-col">
-                        <h3 class="text-xl font-bold text-white">Essenziale</h3>
-                        <p class="text-gray-400 mt-2">Per chi è all'inizio e vuole solo essere in regola.</p>
-                        <div class="mt-6 price-container" data-price-annuale="€16.58" data-price-mensile="€19" data-desc-annuale="Fatturato annualmente a €199" data-desc-mensile="Fatturato mensilmente">
-                            <span class="text-5xl font-black text-white price-value"></span>
-                            <span class="text-gray-400">/ mese</span>
-                            <p class="text-sm text-gray-500 mt-1 price-desc"></p>
-                        </div>
-                        <ul class="mt-8 space-y-4 text-gray-300 flex-grow">
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Fatturazione Elettronica (10/mese)</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Calcolo Tasse e Contributi</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Scadenzario Fiscale</span></li>
-                        </ul>
-                        <a href="https://buy.stripe.com/8x2eVe7Y85ep3VC8Umawo01" class="payment-button button-annual mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all">Inizia Subito</a>
-                        <a href="https://buy.stripe.com/eVq28sa6g8qBcs85Iaawo00" class="payment-button button-monthly mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all" style="display: none;">Inizia Subito</a>
-                    </div>
-
-                    <!-- Piano 2: Pro -->
-                    <div id="pro-plan-card" class="feature-card rounded-xl p-8 flex flex-col relative border-2 border-indigo-500 shadow-2xl shadow-indigo-500/20">
-                        <div class="pro-badge-container">
-                            <span class="absolute top-0 -translate-y-1/2 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full pro-badge-default">IL PIÙ SCELTO</span>
-                            <span class="absolute top-0 -translate-y-1/2 bg-amber-400 text-black text-xs font-bold px-3 py-1 rounded-full pro-badge-founder" style="display: none;">OFFERTA FONDATORI -50%</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Pro</h3>
-                        <p class="text-gray-400 mt-2">Per professionisti che vogliono ottimizzare e crescere.</p>
-                        <div class="mt-6 price-container" data-price-annuale="€16.62" data-price-mensile="€39" data-desc-annuale="Fatturato annualmente a €199.50" data-desc-mensile="Fatturato mensilmente" data-original-price-annuale="€399">
-                            <div class="price-display-annual" style="display: none;">
-                                <span class="text-2xl text-gray-500 line-through">€399</span>
-                                <span class="text-5xl font-black text-white price-value">€199.50</span>
-                                <span class="text-gray-400">/ anno</span>
-                                <p class="text-sm text-indigo-400 mt-1 font-semibold">Prezzo bloccato per sempre</p>
-                                <p class="text-xs text-amber-400 mt-2">L'offerta Fondatori termina il 30 Settembre.</p>
-                            </div>
-                             <div class="price-display-monthly">
-                                <span class="text-5xl font-black text-white price-value"></span>
-                                <span class="text-gray-400">/ mese</span>
-                                <p class="text-sm text-gray-500 mt-1 price-desc"></p>
-                            </div>
-                        </div>
-                        <ul class="mt-8 space-y-4 text-gray-300 flex-grow">
-                             <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Tutto di Essenziale, e in più:</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Fatture Elettroniche <strong>Illimitate</strong></span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Previsioni Fiscali Avanzate</strong></span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Potenziato dalla nostra <strong>Aiva Fiscal AI™</strong></span></li>
-                        </ul>
-                         <a href="https://buy.stripe.com/8x29AUfqAcGRgIogmOawo03?prefilled_promo_code=SCONTO-FONDATORI-50" class="payment-button button-annual mt-8 block w-full text-center cta-button text-white font-semibold py-3 rounded-lg">Blocca il mio Sconto del 50%</a>
-                         <a href="https://buy.stripe.com/fZueVe6U4cGReAg3A2awo02" class="payment-button button-monthly mt-8 block w-full text-center cta-button text-white font-semibold py-3 rounded-lg" style="display: none;">Passa a Pro</a>
-                    </div>
-
-                    <!-- Piano 3: Studio -->
-                    <div class="feature-card rounded-xl p-8 flex flex-col">
-                        <h3 class="text-xl font-bold text-white">Studio</h3>
-                        <p class="text-gray-400 mt-2">Per team, agenzie e commercialisti.</p>
-                        <div class="mt-6 price-container" data-price-annuale="€66.58" data-price-mensile="€79" data-desc-annuale="Fatturato annualmente a €799" data-desc-mensile="Fatturato mensilmente">
-                            <span class="text-5xl font-black text-white price-value"></span>
-                            <span class="text-gray-400">/ mese</span>
-                            <p class="text-sm text-gray-500 mt-1 price-desc"></p>
-                        </div>
-                        <ul class="mt-8 space-y-4 text-gray-300 flex-grow">
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Tutto di Pro, e in più:</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Gestione Multi-utente</span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-indigo-300">Consulenza Strategica Dedicata</strong></span></li>
-                            <li class="flex items-start"><svg class="w-5 h-5 text-indigo-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Accesso API e Integrazioni</span></li>
-                        </ul>
-                        <a href="mailto:info@aiva-commercialista.it" class="payment-button button-annual mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all">Contattaci</a>
-                        <a href="mailto:info@aiva-commercialista.it" class="payment-button button-monthly mt-8 block w-full text-center border border-indigo-500 text-indigo-400 font-semibold py-3 rounded-lg hover:bg-indigo-500 hover:text-white transition-all" style="display: none;">Contattaci</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ Section -->
-            <section class="container mx-auto px-6 mt-24 md:mt-32">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Domande? Abbiamo le risposte.</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-400">Abbiamo raccolto i dubbi più comuni per aiutarti a scegliere con serenità.</p>
-                </div>
-                <div class="max-w-3xl mx-auto space-y-4" id="faq-container">
-                    <!-- FAQ Item 1 -->
-                    <div class="faq-item rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
-                            <span class="font-semibold text-lg text-white">C'è un periodo di prova o una garanzia?</span>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-6">
-                            <p class="text-gray-400">Assolutamente sì. Crediamo così tanto nel valore di Aiva che ti offriamo una garanzia completa "Soddisfatto o Rimborsato" di 14 giorni. Prova il servizio senza rischi: se non sei convinto, ti rimborsiamo l'intero importo, senza fare domande.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ Item 2 -->
-                    <div class="faq-item rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
-                            <span class="font-semibold text-lg text-white">Posso disdire quando voglio?</span>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-6">
-                            <p class="text-gray-400">Certo. La flessibilità è fondamentale per un freelance. Puoi disdire il tuo abbonamento in qualsiasi momento, con un semplice click dalla tua area personale. Nessun vincolo, nessuna penale.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ Item 3 -->
-                    <div class="faq-item rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
-                            <span class="font-semibold text-lg text-white">Cosa succede se supero la soglia di 85.000€?</span>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-6">
-                            <p class="text-gray-400">Nessun problema, siamo con te anche in questa fase di crescita. Aiva monitora il tuo fatturato e ti avvisa per tempo all'avvicinarsi della soglia. Insieme a un nostro commercialista partner, pianificheremo il passaggio al regime ordinario per l'anno successivo, garantendoti una transizione fluida e senza stress.</p>
-                        </div>
-                    </div>
-                    <!-- FAQ Item 4 -->
-                    <div class="faq-item rounded-lg">
-                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
-                            <span class="font-semibold text-lg text-white">I miei dati sono al sicuro con Aiva?</span>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-6">
-                            <p class="text-gray-400">La sicurezza dei tuoi dati è la nostra massima priorità. Utilizziamo protocolli di crittografia avanzati (gli stessi delle banche) e i nostri server sono conformi alle normative GDPR più stringenti. Puoi gestire la tua attività con la certezza che le tue informazioni sono protette.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Founder's Promise Section -->
-            <section class="container mx-auto px-6 mt-24 md:mt-32">
-                <div class="max-w-3xl mx-auto bg-gray-900/30 rounded-xl p-8 md:p-12 text-center">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white">Creato da un forfettario, per i forfettari.</h3>
-                    <p class="mt-6 text-gray-400 text-lg leading-relaxed">
-                        "Ho creato Aiva perché ho vissuto sulla mia pelle la frustrazione del Regime Forfettario. La mia missione è usare la tecnologia per restituire a migliaia di freelance italiani la libertà di concentrarsi sul proprio talento, non sulle tasse. Aiva è il partner che avrei sempre voluto avere. Ora può essere il tuo."
+    <main>
+        <!-- HERO -->
+        <section class="relative">
+            <div class="container max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center py-20 md:py-28 px-6">
+                <div>
+                    <h1 class="font-serif text-4xl md:text-6xl font-semibold tracking-tighter text-gray-900">
+                        Tu crea il tuo valore.<br>
+                        Alla burocrazia pensiamo noi.
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-600 max-w-xl">
+                        AIVA unisce la potenza dell'intelligenza artificiale per automatizzare la burocrazia e l'esperienza di un commercialista vero per darti risposte strategiche.
                     </p>
-                    <p class="mt-8 signature">Italo</p>
+                    <div class="mt-8 flex items-center gap-3">
+                        <a href="#solution" class="cta-button inline-flex items-center h-12 px-6 text-base font-medium">Scopri come funziona</a>
+                    </div>
                 </div>
-            </section>
+                <div class="hidden md:block">
+                    <div class="relative card p-3">
+                        <div class="aspect-[16/10] bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
+                           <img src="hero-calendario.png" alt="Anteprima del Calendario Fiscale di Aiva con le scadenze" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </main>
-        
-        <!-- Footer -->
-        <footer class="container mx-auto px-6 py-8 border-t border-gray-800">
+        <!-- FEATURES SECTION -->
+        <section id="features" class="container max-w-6xl mx-auto py-12 md:py-20 px-6">
+            <div class="text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold tracking-tight">Un sistema intelligente, costruito per te.</h2>
+            </div>
+        </section>
+
+        <!-- AI + HUMAN SOLUTION SECTION -->
+        <section id="solution" class="bg-gray-50 border-y border-gray-200">
+            <div class="container max-w-6xl mx-auto py-20 md:py-28 px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="font-serif text-3xl md:text-4xl font-semibold tracking-tight">La nostra soluzione: Potenza AI, Guida Umana.</h2>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mt-4">L'Efficienza dell'Intelligenza Artificiale</h3>
+                        <p class="mt-2 text-sm text-gray-600">
+                            Hai una domanda alle 10 di sera? Basta un click su 
+                            <img src="aiva-chat-chiusa.png" alt="Pulsante Aiva Fiscal AI" class="inline-block h-6 mx-1 align-middle"> 
+                            per avere risposte immediate.
+                        </p>
+                    </div>
+                    <div class="p-6">
+                        <img src="aiva-chat-aperta.png" alt="Schermata del chat Aiva Fiscal AI" class="rounded-xl shadow-xl ring-1 ring-gray-900/10 w-full max-w-sm mx-auto">
+                    </div>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                     <div class="p-6 text-right md:order-2">
+                        <h3 class="font-semibold text-lg mt-4">L'Esperienza di un Commercialista</h3>
+                        <p class="mt-2 text-sm text-gray-600">Quando i numeri non bastano, c'è un professionista al tuo fianco.</p>
+                    </div>
+                    <div class="p-6 md:order-1">
+                        <div class="card p-3 max-w-sm mx-auto">
+                             <div class="aspect-[16/10] bg-gray-50 grid place-items-center rounded-lg text-gray-500 border border-gray-200">
+                                <img src="commercialista.png" alt="Immagine di un commercialista partner" class="rounded-lg w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL PROOF SECTION -->
+        <section class="container max-w-4xl mx-auto py-16 px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <div class="pt-8 md:pt-0">
+                    <p class="font-serif text-4xl font-semibold text-gray-900">50+</p>
+                    <p class="text-sm text-gray-500 mt-1">Professionisti a bordo</p>
+                </div>
+                <div class="pt-8 md:pt-0">
+                    <p class="font-serif text-4xl font-semibold text-gray-900">1.200+</p>
+                    <p class="text-sm text-gray-500 mt-1">Fatture già emesse</p>
+                </div>
+                <div class="pt-8 md:pt-0">
+                    <p class="font-serif text-4xl font-semibold text-gray-900">€250k+</p>
+                    <p class="text-sm text-gray-500 mt-1">Fatturato gestito</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+         <section id="testimonials" class="bg-gray-50 border-y border-gray-200">
+            <div class="container max-w-6xl mx-auto py-20 md:py-28 px-6">
+                <div class="text-center">
+                    <h2 class="font-serif text-3xl md:text-4xl font-semibold tracking-tight">Le loro parole, la nostra promessa.</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">Ecco cosa dicono i professionisti che hanno già smesso di preoccuparsi della burocrazia.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <article class="card p-6 flex flex-col justify-between">
+                        <p class="text-gray-700">"Con Aiva ho smesso di passare le domeniche a fare i conti. La previsione delle tasse mi ha salvato da brutte sorprese. Ho risparmiato almeno 5 ore al mese, che ho reinvestito per ottimizzare il mio codice."</p>
+                        <div class="flex items-center mt-6">
+                            <img class="w-11 h-11 rounded-full object-cover" src="https://placehold.co/100x100/E0E7FF/1F2937?text=M" alt="Foto di Marco C.">
+                            <div class="ml-4">
+                                <p class="font-semibold text-gray-900">Marco C.</p>
+                                <p class="text-sm text-gray-500">Sviluppatore Freelance</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card p-6 flex flex-col justify-between">
+                        <p class="text-gray-700">"Da social media manager, il mio forte sono i contenuti, non i numeri. Aiva ha reso la fatturazione un processo di due minuti, non più un incubo che mi prosciugava le energie creative."</p>
+                        <div class="flex items-center mt-6">
+                            <img class="w-11 h-11 rounded-full object-cover" src="https://placehold.co/100x100/E0E7FF/1F2937?text=G" alt="Foto di Giulia C.">
+                            <div class="ml-4">
+                                <p class="font-semibold text-gray-900">Giulia C.</p>
+                                <p class="text-sm text-gray-500">Social Media Manager</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card p-6 flex flex-col justify-between">
+                        <p class="text-gray-700">"Ero scettico, ma mi sono ricreduto. L'AI è perfetta per le domande veloci e avere un commercialista per le questioni complesse è la combinazione perfetta per prendere decisioni rapide e informate."</p>
+                        <div class="flex items-center mt-6">
+                            <img class="w-11 h-11 rounded-full object-cover" src="https://placehold.co/100x100/E0E7FF/1F2937?text=A" alt="Foto di Alessandro C.">
+                            <div class="ml-4">
+                                <p class="font-semibold text-gray-900">Alessandro C.</p>
+                                <p class="text-sm text-gray-500">Consulente Marketing</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+         </section>
+
+        <!-- PRICING SECTION -->
+        <section id="pricing" class="container mx-auto px-6 py-20 md:py-28">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold tracking-tight">Investi sulla tua risorsa più importante: te stesso.</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">Ogni piano è disegnato per liberare il tuo potenziale e farti crescere più velocemente.</p>
+            </div>
+            <div class="flex items-center justify-center space-x-4 mb-12">
+                <span id="toggle-label-annuale" class="font-medium text-gray-900 transition-colors duration-300">Annuale (Risparmi 2 mesi)</span>
+                <label for="pricing-toggle" class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="pricing-toggle" class="sr-only peer">
+                    <div class="w-14 h-8 pricing-toggle-bg rounded-full flex items-center p-1 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-gray-400/50">
+                        <div class="w-6 h-6 rounded-full pricing-toggle-handle"></div>
+                    </div>
+                </label>
+                <span id="toggle-label-mensile" class="font-medium text-gray-500 transition-colors duration-300">Mensile</span>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="card p-8 flex flex-col">
+                    <h3 class="font-serif text-xl font-bold">Essenziale</h3>
+                    <p class="text-gray-600 mt-2 text-sm">Per chi è all'inizio e vuole solo essere in regola.</p>
+                    <div class="mt-6 price-container" data-price-annuale="€16.58" data-price-mensile="€19" data-desc-annuale="Fatturato annualmente a €199" data-desc-mensile="Fatturato mensilmente">
+                        <span class="text-5xl font-bold price-value"></span>
+                        <span class="text-gray-500">/ mese</span>
+                        <p class="text-xs text-gray-500 mt-1 price-desc"></p>
+                    </div>
+                    <ul class="mt-8 space-y-4 text-sm text-gray-700 flex-grow">
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Fatturazione Elettronica (10/mese)</span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Calcolo Tasse e Contributi</span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Scadenzario Fiscale</span></li>
+                    </ul>
+                    <a href="https://buy.stripe.com/8x2eVe7Y85ep3VC8Umawo01" class="payment-button button-annual mt-8 block w-full text-center secondary-button font-medium py-3">Inizia Subito</a>
+                    <a href="https://buy.stripe.com/eVq28sa6g8qBcs85Iaawo00" class="payment-button button-monthly mt-8 block w-full text-center secondary-button font-medium py-3" style="display: none;">Inizia Subito</a>
+                </div>
+                <div id="pro-plan-card" class="card p-8 flex flex-col relative border-2 border-gray-900">
+                    <div class="pro-badge-container">
+                        <span class="absolute top-0 -translate-y-1/2 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full pro-badge-default">IL PIÙ SCELTO</span>
+                        <span class="absolute top-0 -translate-y-1/2 bg-amber-400 text-black text-xs font-bold px-3 py-1 rounded-full pro-badge-founder" style="display: none;">OFFERTA FONDATORI -50%</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold">Pro</h3>
+                    <p class="text-gray-600 mt-2 text-sm">Per professionisti che vogliono ottimizzare e crescere.</p>
+                    <div class="mt-6 price-container" data-price-annuale="€16.62" data-price-mensile="€39" data-desc-annuale="Fatturato annualmente a €199.50" data-desc-mensile="Fatturato mensilmente">
+                        <div class="price-display-annual" style="display: none;">
+                            <span class="text-2xl text-gray-500 line-through">€399</span>
+                            <span class="text-5xl font-bold price-value">€199.50</span>
+                            <span class="text-gray-500">/ anno</span>
+                            <p class="text-sm text-gray-900 mt-1 font-semibold">Prezzo bloccato per sempre</p>
+                            <p class="text-xs text-amber-600 mt-2">L'offerta Fondatori termina il 30 Settembre.</p>
+                        </div>
+                         <div class="price-display-monthly">
+                            <span class="text-5xl font-bold price-value"></span>
+                            <span class="text-gray-500">/ mese</span>
+                            <p class="text-xs text-gray-500 mt-1 price-desc"></p>
+                        </div>
+                    </div>
+                    <ul class="mt-8 space-y-4 text-sm text-gray-700 flex-grow">
+                         <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Tutto di Essenziale, e in più:</span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Fatture Elettroniche <strong>Illimitate</strong></span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Previsioni Fiscali Avanzate</strong></span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Potenziato dalla nostra <strong>Aiva Fiscal AI™</strong></span></li>
+                    </ul>
+                     <a href="https://buy.stripe.com/8x29AUfqAcGRgIogmOawo03?prefilled_promo_code=SCONTO-FONDATORI-50" class="payment-button button-annual mt-8 block w-full text-center cta-button font-medium py-3">Blocca il mio Sconto del 50%</a>
+                     <a href="https://buy.stripe.com/fZueVe6U4cGReAg3A2awo02" class="payment-button button-monthly mt-8 block w-full text-center cta-button font-medium py-3" style="display: none;">Passa a Pro</a>
+                </div>
+                <div class="card p-8 flex flex-col">
+                    <h3 class="font-serif text-xl font-bold">Studio</h3>
+                    <p class="text-gray-600 mt-2 text-sm">Per team, agenzie e commercialisti.</p>
+                    <div class="mt-6 price-container" data-price-annuale="€66.58" data-price-mensile="€79" data-desc-annuale="Fatturato annualmente a €799" data-desc-mensile="Fatturato mensilmente">
+                        <span class="text-5xl font-bold price-value"></span>
+                        <span class="text-gray-500">/ mese</span>
+                        <p class="text-xs text-gray-500 mt-1 price-desc"></p>
+                    </div>
+                    <ul class="mt-8 space-y-4 text-sm text-gray-700 flex-grow">
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Tutto di Pro, e in più:</span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Gestione Multi-utente</span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Consulenza Strategica Dedicata</strong></span></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-gray-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Accesso API e Integrazioni</span></li>
+                    </ul>
+                    <a href="mailto:info@aiva-commercialista.it" class="payment-button button-annual mt-8 block w-full text-center secondary-button font-medium py-3">Contattaci</a>
+                    <a href="mailto:info@aiva-commercialista.it" class="payment-button button-monthly mt-8 block w-full text-center secondary-button font-medium py-3" style="display: none;">Contattaci</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="bg-gray-50 border-y border-gray-200">
+            <div class="container max-w-3xl mx-auto py-20 md:py-28 px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-3xl md:text-4xl font-semibold tracking-tight">Domande? Abbiamo le risposte.</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">Abbiamo raccolto i dubbi più comuni per aiutarti a scegliere con serenità.</p>
+                </div>
+                <div class="space-y-4" id="faq-container">
+                    <!-- FAQ Items will be generated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUNDER'S NOTE -->
+        <section class="container max-w-3xl mx-auto py-20 md:py-28 px-6">
+            <div class="card p-8 md:p-12 text-center">
+                <h3 class="font-serif text-2xl md:text-3xl font-semibold">Creato da un forfettario, per i forfettari.</h3>
+                <p class="mt-6 text-gray-600 text-lg leading-relaxed">
+                    "Ho creato Aiva perché ho vissuto sulla mia pelle la frustrazione del Regime Forfettario. La mia missione è usare la tecnologia per restituire a migliaia di freelance italiani la libertà di concentrarsi sul proprio talento, non sulle tasse. Aiva è il partner che avrei sempre voluto avere. Ora può essere il tuo."
+                </p>
+                <p class="mt-8 signature">Italo</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-200">
+        <div class="container max-w-6xl mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-                <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 17a10 10 0 0 0-20 0"/><path d="M6 17a6 6 0 0 1 12 0"/><path d="M10 17a2 2 0 0 1 4 0"/></svg>
-                    <span class="text-lg font-semibold text-white">Aiva</span>
+                <div class="mb-4 md:mb-0 text-xl font-bold text-gray-900">
+                    Aiva
                 </div>
                 <p class="text-sm text-gray-500">&copy; 2025 Aiva. Tutti i diritti riservati.</p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="text-sm text-gray-500 hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="text-sm text-gray-500 hover:text-white transition">Termini di Servizio</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-900 transition">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-900 transition">Termini di Servizio</a>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
-    <!-- BOTTONE WHATSAPP FLUTTUANTE E BUBBLE -->
-    <div id="whatsapp-bubble" class="whatsapp-bubble">Hai una domanda? Scrivici!</div>
+    <!-- WHATSAPP BUBBLE & BUTTON -->
+    <div id="whatsapp-bubble" class="whatsapp-bubble">
+        Hai una domanda? Scrivici qui!
+    </div>
     <a href="https://wa.me/393279799076?text=Ciao%2C%20ho%20una%20domanda%20su%20Aiva..." target="_blank" class="fixed bottom-5 right-5 z-40 p-3 bg-green-500 rounded-full shadow-lg hover:scale-110 transition-transform">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.794.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
-    <!-- SCRIPT JAVASCRIPT -->
+    <!-- JAVASCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- LOGICA PRICING TOGGLE ---
+            // --- PRICING TOGGLE LOGIC ---
             const toggle = document.getElementById('pricing-toggle');
-            const priceContainers = document.querySelectorAll('.price-container');
-            const toggleLabelAnnuale = document.getElementById('toggle-label-annuale');
-            const toggleLabelMensile = document.getElementById('toggle-label-mensile');
+            if (toggle) {
+                const priceContainers = document.querySelectorAll('.price-container');
+                const toggleLabelAnnuale = document.getElementById('toggle-label-annuale');
+                const toggleLabelMensile = document.getElementById('toggle-label-mensile');
 
-            function updatePricesAndButtons() {
-                const isMonthly = toggle.checked;
-                if (toggleLabelAnnuale && toggleLabelMensile) {
-                    toggleLabelAnnuale.classList.toggle('text-white', !isMonthly);
+                function updatePricesAndButtons() {
+                    const isMonthly = toggle.checked;
+                    toggleLabelAnnuale.classList.toggle('text-gray-900', !isMonthly);
                     toggleLabelAnnuale.classList.toggle('text-gray-500', isMonthly);
-                    toggleLabelMensile.classList.toggle('text-white', isMonthly);
+                    toggleLabelMensile.classList.toggle('text-gray-900', isMonthly);
                     toggleLabelMensile.classList.toggle('text-gray-500', !isMonthly);
-                }
-                priceContainers.forEach(container => {
-                    const isProCard = container.closest('#pro-plan-card') !== null;
-                    if (isProCard) {
-                        const priceDisplayAnnual = container.querySelector('.price-display-annual');
-                        const priceDisplayMonthly = container.querySelector('.price-display-monthly');
-                        const badgeDefault = document.querySelector('.pro-badge-default');
-                        const badgeFounder = document.querySelector('.pro-badge-founder');
-                        if (isMonthly) {
-                            if (priceDisplayAnnual) priceDisplayAnnual.style.display = 'none';
-                            if (priceDisplayMonthly) priceDisplayMonthly.style.display = 'block';
-                            if (badgeDefault) badgeDefault.style.display = 'block';
-                            if (badgeFounder) badgeFounder.style.display = 'none';
-                            const priceValueEl = priceDisplayMonthly.querySelector('.price-value');
-                            const priceDescEl = priceDisplayMonthly.querySelector('.price-desc');
-                            if(priceValueEl) priceValueEl.textContent = container.dataset.priceMensile;
-                            if(priceDescEl) priceDescEl.textContent = container.dataset.descMensile;
-                        } else {
-                            if (priceDisplayAnnual) priceDisplayAnnual.style.display = 'block';
-                            if (priceDisplayMonthly) priceDisplayMonthly.style.display = 'none';
-                            if (badgeDefault) badgeDefault.style.display = 'none';
-                            if (badgeFounder) badgeFounder.style.display = 'block';
-                        }
-                    } else {
-                        const priceValueEl = container.querySelector('.price-value');
-                        const priceDescEl = container.querySelector('.price-desc');
-                        if (priceValueEl && priceDescEl) {
+
+                    priceContainers.forEach(container => {
+                        const isProCard = container.closest('#pro-plan-card') !== null;
+                        if (isProCard) {
+                            const priceDisplayAnnual = container.querySelector('.price-display-annual');
+                            const priceDisplayMonthly = container.querySelector('.price-display-monthly');
+                            const badgeDefault = container.closest('.card').querySelector('.pro-badge-default');
+                            const badgeFounder = container.closest('.card').querySelector('.pro-badge-founder');
+
                             if (isMonthly) {
-                                priceValueEl.textContent = container.dataset.priceMensile;
-                                priceDescEl.textContent = container.dataset.descMensile;
+                                if (priceDisplayAnnual) priceDisplayAnnual.style.display = 'none';
+                                if (priceDisplayMonthly) priceDisplayMonthly.style.display = 'block';
+                                if (badgeDefault) badgeDefault.style.display = 'block';
+                                if (badgeFounder) badgeFounder.style.display = 'none';
+                                const priceValueEl = priceDisplayMonthly.querySelector('.price-value');
+                                const priceDescEl = priceDisplayMonthly.querySelector('.price-desc');
+                                if(priceValueEl) priceValueEl.textContent = container.dataset.priceMensile;
+                                if(priceDescEl) priceDescEl.textContent = container.dataset.descMensile;
                             } else {
-                                priceValueEl.textContent = container.dataset.priceAnnuale;
-                                priceDescEl.textContent = container.dataset.descAnnuale;
+                                if (priceDisplayAnnual) priceDisplayAnnual.style.display = 'block';
+                                if (priceDisplayMonthly) priceDisplayMonthly.style.display = 'none';
+                                if (badgeDefault) badgeDefault.style.display = 'none';
+                                if (badgeFounder) badgeFounder.style.display = 'block';
+                            }
+                        } else {
+                            const priceValueEl = container.querySelector('.price-value');
+                            const priceDescEl = container.querySelector('.price-desc');
+                            if (priceValueEl && priceDescEl) {
+                                priceValueEl.textContent = isMonthly ? container.dataset.priceMensile : container.dataset.priceAnnuale;
+                                priceDescEl.textContent = isMonthly ? container.dataset.descMensile : container.dataset.descAnnuale;
                             }
                         }
-                    }
-                });
-                document.querySelectorAll('.button-annual').forEach(btn => { if (btn) btn.style.display = isMonthly ? 'none' : 'block'; });
-                document.querySelectorAll('.button-monthly').forEach(btn => { if (btn) btn.style.display = isMonthly ? 'block' : 'none'; });
+                    });
+                    document.querySelectorAll('.payment-button.button-annual').forEach(btn => btn.style.display = isMonthly ? 'none' : 'block');
+                    document.querySelectorAll('.payment-button.button-monthly').forEach(btn => btn.style.display = isMonthly ? 'block' : 'none');
+                }
+                toggle.addEventListener('change', updatePricesAndButtons);
+                updatePricesAndButtons(); // Initial call
             }
-            if (toggle) { toggle.addEventListener('change', updatePricesAndButtons); }
-            updatePricesAndButtons();
 
-            // --- LOGICA SMOOTH SCROLL ---
+            // --- SMOOTH SCROLL LOGIC ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    const targetElement = document.querySelector(this.getAttribute('href'));
-                    if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth' }); }
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
                 });
             });
 
-            // --- LOGICA FAQ ACCORDION ---
+            // --- FAQ ACCORDION LOGIC ---
             const faqContainer = document.getElementById('faq-container');
             if (faqContainer) {
+                const faqData = [
+                    { question: "C'è un periodo di prova o una garanzia?", answer: "Assolutamente sì. Crediamo così tanto nel valore di Aiva che ti offriamo una garanzia completa 'Soddisfatto o Rimborsato' di 14 giorni. Prova il servizio senza rischi: se non sei convinto, ti rimborsiamo l'intero importo, senza fare domande." },
+                    { question: "Posso disdire quando voglio?", answer: "Certo. La flessibilità è fondamentale per un freelance. Puoi disdire il tuo abbonamento in qualsiasi momento, con un semplice click dalla tua area personale. Nessun vincolo, nessuna penale." },
+                    { question: "Cosa succede se supero la soglia di 85.000€?", answer: "Nessun problema, siamo con te anche in questa fase di crescita. Aiva monitora il tuo fatturato e ti avvisa per tempo all'avvicinarsi della soglia. Insieme a un nostro commercialista partner, pianificheremo il passaggio al regime ordinario per l'anno successivo, garantendoti una transizione fluida e senza stress." },
+                    { question: "I miei dati sono al sicuro con Aiva?", answer: "La sicurezza dei tuoi dati è la nostra massima priorità. Utilizziamo protocolli di crittografia avanzati (gli stessi delle banche) e i nostri server sono conformi alle normative GDPR più stringenti. Puoi gestire la tua attività con la certezza che le tue informazioni sono protette." }
+                ];
+
+                faqData.forEach(item => {
+                    const faqItem = document.createElement('div');
+                    faqItem.className = 'card';
+                    faqItem.innerHTML = `
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="font-semibold text-lg text-gray-900">${item.question}</span>
+                            <svg class="w-5 h-5 text-gray-400 transform transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-600 pb-6">${item.answer}</p>
+                        </div>
+                    `;
+                    faqContainer.appendChild(faqItem);
+                });
+
                 faqContainer.addEventListener('click', function(e) {
                     const questionButton = e.target.closest('.faq-question');
                     if (!questionButton) return;
-                    const answer = questionButton.nextElementSibling;
-                    const icon = questionButton.querySelector('svg');
-                    const allQuestions = faqContainer.querySelectorAll('.faq-question');
-                    allQuestions.forEach(q => {
-                        if (q !== questionButton) {
-                            q.nextElementSibling.style.maxHeight = null;
-                            q.querySelector('svg').classList.remove('rotate-180');
+                    
+                    const allItems = faqContainer.querySelectorAll('.card');
+                    const currentItem = questionButton.parentElement;
+                    
+                    allItems.forEach(item => {
+                        const answer = item.querySelector('.faq-answer');
+                        const icon = item.querySelector('svg');
+                        if (item !== currentItem) {
+                            answer.style.maxHeight = null;
+                            icon.classList.remove('rotate-180');
                         }
                     });
-                    if (answer.style.maxHeight) {
-                        answer.style.maxHeight = null;
-                        icon.classList.remove('rotate-180');
+                    
+                    const currentAnswer = currentItem.querySelector('.faq-answer');
+                    const currentIcon = currentItem.querySelector('svg');
+                    if (currentAnswer.style.maxHeight) {
+                        currentAnswer.style.maxHeight = null;
+                        currentIcon.classList.remove('rotate-180');
                     } else {
-                        answer.style.maxHeight = answer.scrollHeight + "px";
-                        icon.classList.add('rotate-180');
+                        currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
+                        currentIcon.classList.add('rotate-180');
                     }
                 });
             }
-            
-            // --- LOGICA WHATSAPP BUBBLE ---
+
+            // --- WHATSAPP BUBBLE LOGIC ---
             const whatsappBubble = document.getElementById('whatsapp-bubble');
             if (whatsappBubble) {
-                setTimeout(() => { whatsappBubble.classList.add('show'); }, 10000);
-                setTimeout(() => { whatsappBubble.classList.remove('show'); }, 20000);
+                // Mostra la bolla dopo 8 secondi
+                setTimeout(() => { whatsappBubble.classList.add('show'); }, 8000);
+                // Nascondi la bolla dopo altri 10 secondi (totale 18s)
+                setTimeout(() => { whatsappBubble.classList.remove('show'); }, 18000);
             }
         });
     </script>
