@@ -186,11 +186,16 @@
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="p-6">
                         <h3 class="font-semibold text-lg mt-4">L'Efficienza dell'Intelligenza Artificiale</h3>
-                        <p class="mt-2 text-sm text-gray-600">
-                            Hai una domanda alle 10 di sera? Basta un click su 
-                            <img src="aiva-fiscal-chat-chiusa.png" alt="Pulsante Aiva Fiscal AI" class="inline-block h-6 mx-1 align-middle"> 
-                            per avere risposte immediate.
+                        <p class="mt-2 text-gray-600">
+                            Hai un dubbio sul Regime Forfettario? Mettici alla prova. Chiedi alla nostra AI e ricevi una risposta accurata in pochi secondi.
                         </p>
+                        <!-- THIS IS THE NEW BUTTON -->
+                        <div class="mt-6">
+                            <button id="aiva-chat-button" class="secondary-button inline-flex items-center h-11 px-6 text-base font-medium">
+                                <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.99989 15.0001H6.00013C6.55241 15.0001 7.00013 15.4478 7.00013 16.0001V17.0001C7.00013 17.5524 6.55241 18.0001 6.00013 18.0001H4.99989C4.4476 18.0001 3.99989 17.5524 3.99989 17.0001V16.0001C3.99989 15.4478 4.4476 15.0001 4.99989 15.0001Z M8.99989 15.0001H10.0001C10.5524 15.0001 11.0001 15.4478 11.0001 16.0001V17.0001C11.0001 17.5524 10.5524 18.0001 10.0001 18.0001H8.99989C8.4476 18.0001 7.99989 17.5524 7.99989 17.0001V16.0001C7.99989 15.4478 8.4476 15.0001 8.99989 15.0001Z M12.9999 15.0001H14C14.5523 15.0001 15 15.4478 15 16.0001V17.0001C15 17.5524 14.5523 18.0001 14 18.0001H12.9999C12.4476 18.0001 11.9999 17.5524 11.9999 17.0001V16.0001C11.9999 15.4478 12.4476 15.0001 12.9999 15.0001Z M17 4.00002C14.1221 4.00002 11.4589 5.31825 9.61596 7.16122C7.77303 9.00419 6.4548 11.6674 6.4548 14.5453L6.45455 15.0908C6.45455 15.939 7.13868 16.6231 7.98686 16.6231H16.0131C16.8613 16.6231 17.5455 15.939 17.5455 15.0908L17.5452 14.5453C17.5452 11.6674 16.227 9.00419 14.384 7.16122C12.5411 5.31825 9.87787 4.00002 7.00002 4.00002H17ZM2.00002 12.5C2.00002 6.14875 7.14875 1.00002 13.5 1.00002C19.8512 1.00002 25 6.14875 25 12.5C25 18.8512 19.8512 24 13.5 24C12.6953 24 11.9056 23.9061 11.1394 23.7259L5.51947 25.4805C5.16599 25.5866 4.79339 25.3441 4.68725 24.9906L2.93273 19.3707C2.33235 17.2052 2.00002 14.9044 2.00002 12.5Z"></path></svg>
+                                Chiedi all'AI
+                            </button>
+                        </div>
                     </div>
                     <div class="p-6">
                         <img src="aiva-chat-aperta.png" alt="Schermata del chat Aiva Fiscal AI" class="rounded-xl shadow-xl ring-1 ring-gray-900/10 w-full max-w-sm mx-auto">
@@ -396,15 +401,20 @@
         </div>
     </footer>
 
-    <!-- WHATSAPP BUBBLE & BUTTON -->
-    <!--
-    <div id="whatsapp-bubble" class="whatsapp-bubble">
-        Hai una domanda? Scrivici qui!
-    </div>
-    <a href="https://wa.me/393279799076?text=Ciao%2C%20ho%20una%20domanda%20su%20Aiva..." target="_blank" class="fixed bottom-5 right-5 z-40 p-3 bg-green-500 rounded-full shadow-lg hover:scale-110 transition-transform">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.11.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.794.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    </a>
-    -->
+    <!-- INTERCOM SCRIPT & SETTINGS -->
+    <script>
+        window.intercomSettings = {
+            api_base: "https://api-iam.intercom.io",
+            app_id: "uhhq6kvu",
+            custom_launcher_selector: '#aiva-chat-button'
+            // To show the default launcher bubble, we remove hide_default_launcher
+            // hide_default_launcher: true 
+        };
+    </script>
+    <script>
+        // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/uhhq6kvu'
+        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/uhhq6kvu';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
 
     <!-- JAVASCRIPT -->
     <script>
@@ -528,19 +538,6 @@
             }
         });
     </script>
-    
-    <!-- Intercom Script -->
-    <script>
-        window.intercomSettings = {
-            api_base: "https://api-iam.intercom.io",
-            app_id: "uhhq6kvu",
-            custom_launcher_selector: '#aiva-chat-button', // This targets your custom button
-            hide_default_launcher: true // This hides the default Intercom bubble
-        };
-    </script>
-    <script>
-        // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/uhhq6kvu'
-        (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/uhhq6kvu';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-    </script>
 </body>
 </html>
+
